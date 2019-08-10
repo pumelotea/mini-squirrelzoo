@@ -1,0 +1,42 @@
+/* pages/article/article.wxss */
+@import '/towxml/style/main.wxss';
+@import '/towxml/style/theme/light.wxss';
+
+.article {
+  background: white;
+  height: 100%;
+  padding: 0 15px;
+  padding-bottom: 80px;
+}
+
+.article-title {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.like-wrap {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  animation: fade-in-animation 2s 0s ease-in-out;
+}
+
+.comment-list-title {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.spliter-bottom{
+  border-bottom: 1rpx solid rgba(0,0,0,0.2)
+}
+
+.loading-wrap{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  text-align: center;
+}

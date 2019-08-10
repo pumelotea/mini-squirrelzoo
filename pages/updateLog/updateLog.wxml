@@ -1,0 +1,47 @@
+<view class="cu-timeline">
+<view class="cu-item text-orange">
+    <view class="bg-gradual-orange content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-orange">v1.1.0</view>
+        <view class="cu-tag line-white">2019/07/05</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.新增安全中心(邮箱绑定，密码修改)</view>
+        <view>2.新增我的信息(支持个人信息修改和查看)</view>
+        <view>3.热榜列表中的标签和作者信息现在能正确读取了。</view>
+        <view>4.优化启动界面样式风格</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-orange">
+    <view class="bg-orange content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-orange">v1.0.1</view>
+        <view class="cu-tag line-white">2019/06/27</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.新增阅读记录清空功能(通用设置)</view>
+        <view>2.新增收藏记录清空功能(通用设置)</view>
+        <view>3.新增关于页面</view>
+        <view>4.新增更新日志</view>
+        <view>5.修复列表图像被文字挤压的bug</view>
+        <view>6.修复个人中心头像不是正圆的bug</view>
+        <view>7.多处地方添加过渡动画，提高用户体验</view>
+        <view>8.多处地方配色调整</view>
+        <view>9.文章内容解析器更换为towxml,现在，排版更加正常，阅读体验更加舒服</view>
+        <view>10.文章内容超链接地址点击可以复制啦</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-orange">
+    <view class="bg-orange content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-orange">v1.0.0</view>
+        <view class="cu-tag line-white">2019/06/26</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.0版本正式上线</view>
+      </view>
+    </view>
+  </view>
+</view>

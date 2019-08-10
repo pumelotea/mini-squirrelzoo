@@ -1,0 +1,20 @@
+<view style="background-color: var(--ghostWhite);height:100vh;">
+  <view class="cu-list menu" style="padding-top:10px;">
+    <view class="cu-item arrow">
+    <navigator class="content" url="/pages/bindEmail/bindEmail" hover-class="none">
+      <view class="content">
+        <text class="cuIcon-mail text-red"></text>
+        <text class="text-grey">绑定邮箱</text>
+      </view>
+    </navigator>
+    </view>
+    <view class="cu-item arrow">
+    <navigator class="content" url="/pages/changepass/changepass" hover-class="none">
+      <view class="content">
+        <text class="cuIcon-lock text-red"></text>
+        <text class="text-grey">修改密码</text>
+      </view>
+    </navigator>
+    </view>
+</view>
+</view>

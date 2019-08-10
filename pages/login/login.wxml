@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<view class="login-view">
+  <view style="margin-top:-100px">
+    <view style="margin-bottom:30vh;">
+      <image class="logo" src="/images/logo3.png"></image>
+      <view class="text-white" style="font-size:25px;">松鼠乐园</view>
+    </view>
+
+  <view style="height:40px;">
+    
+    <button wx:if="{{showAuthBtn}}" class="cu-btn round lg bg-white shadow" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    <view class="m-loading" style="background-color:white" wx:else></view>
+  </view>
+  <view class="cprt">www.squirrelzoo.com</view>
+  </view>
+</view>

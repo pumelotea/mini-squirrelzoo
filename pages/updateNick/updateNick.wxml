@@ -1,0 +1,12 @@
+<view style="background-color: var(--ghostWhite);height:100vh;padding-top:10px;">
+  <view>
+    <view class="cu-form-group">
+    <view class="title">昵称</view>
+    <input bindinput="newNick" placeholder="必须" value="{{nick}}"></input>
+  </view>
+
+    <view class="padding flex flex-direction">
+      <button bindtap="updateNick" class="cu-btn bg-gradual-red margin-tb-sm lg">确定</button>
+    </view>
+  </view>
+</view>

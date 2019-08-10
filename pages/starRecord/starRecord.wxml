@@ -1,0 +1,26 @@
+<view class="pageView">
+  <view class="cu-bar bg-white" style="margin: 10rpx 0" wx:if="{{list.length==0}}">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text>暂无收藏记录
+    </view>
+  </view>
+    <!-- list -->
+    <view class="cu-card article no-card" wx:for="{{list}}" wx:key>
+      <view class="cu-item shadow" bindtap="gotoDetail" data-aid="{{item.id}}">
+        <view class="title">
+          <view class="text-cut">{{item.title}}</view>
+        </view>
+        <view class="content">
+          <image class="card-img" src="{{item.post_full_image==''?'/images/logo.png':item.post_full_image}}" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content card-content">{{item.excerpt==''?'暂无摘要':item.excerpt}}</view>
+            <view>
+              <view class="cu-tag bg-red light sm round">{{item.category_name}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view style="height:2px;background:#f1f1f1"></view>
+    </view>
+</view>
+

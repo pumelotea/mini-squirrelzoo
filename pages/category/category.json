@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "listView": "/com/listView/listView"
+  },
+  "enablePullDownRefresh": true
+}

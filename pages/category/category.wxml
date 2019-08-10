@@ -1,0 +1,13 @@
+<view style="background-color: var(--ghostWhite);">
+  <view class="cu-list grid col-{{gridCol}} gridBorder ">
+    <view class="cu-item fade-in" wx:for="{{list}}" wx:key 
+    data-cid='{{item.id}}'
+    data-name='{{item.name}}'
+    bindtap="goToArticleList">
+      <view class="first-char text-blue">
+       <block>{{item.count}}</block>
+      </view>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+</view>

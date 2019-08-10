@@ -1,0 +1,22 @@
+<view style="background-color: var(--ghostWhite);height:100vh;">
+  <view class="cu-list menu" style="padding-top:10px;">
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-time text-grey"></text>
+        <text class="text-grey">清空阅读记录</text>
+      </view>
+      <view class="action">
+        <button class="cu-btn round bg-red shadow" bindtap="cleanReadRecord">清空</button>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-favor text-grey"></text>
+        <text class="text-grey">清空收藏记录</text>
+      </view>
+      <view class="action">
+        <button class="cu-btn round bg-red shadow" bindtap="cleanStarRecord">清空</button>
+      </view>
+    </view>
+</view>
+</view>

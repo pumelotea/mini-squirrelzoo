@@ -1,0 +1,45 @@
+<!-- list -->
+<view class="fade-in" style="position:absolute;width:100%;z-index:1024">
+<scroll-view scroll-x class="bg-white nav text-center">
+   <view class="cu-item {{1==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="1">
+      <text class="cuIcon-read"></text> 阅读榜
+    </view>
+    <view class="cu-item {{2==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="2">
+      <text class="cuIcon-appreciate"></text> 点赞榜
+    </view>
+    <view class="cu-item {{3==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="3">
+      <text class="cuIcon-comment"></text> 评论榜
+    </view>
+</scroll-view>
+</view>
+<view style="height: 50px"></view>
+<view style="background-color: var(--ghostWhite);">
+  <view class="cu-card case fade-in" wx:for="{{hotList[TabCur]}}" wx:key>
+    <view class="cu-item shadow" bindtap="gotoDetail" data-aid="{{item.post_id}}">
+      <view class="image">
+        <image src="{{item.post_full_image==''?'/images/logo.png':item.post_full_image}}" mode="widthFix"></image>
+        <view class="cu-tag bg-gradual-blue">{{item.category_name}}</view>
+        <view class="cu-bar bg-shadeBottom">
+          <text class="text-cut">{{item.post_title}}</text>
+        </view>
+      </view>
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar round lg bg-white" style="background-image:url({{item.avatar}});"></view>
+          <view class="content flex-sub">
+            <view class="text-grey">{{item.nickname}}</view>
+            <view class="text-gray text-sm flex justify-between">
+              {{item.post_date}}
+              <view class="text-gray text-sm">
+                <text class="cuIcon-attentionfill margin-lr-xs"></text> {{item.pageviews}}
+                <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.like_count}}
+                <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.comment_total}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

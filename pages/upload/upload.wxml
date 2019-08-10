@@ -1,0 +1,21 @@
+<import src="../../we-cropper/we-cropper.wxml"/>
+
+<view class="cropper-wrapper">
+  <template is="we-cropper" data="{{...cropperOpt}}"/>
+  <view class="cropper-buttons" style="color: {{cropperOpt.boundStyle.color}}">
+    <view
+      class="upload btn"
+      bindtap="uploadTap">
+      选择图片
+    </view>
+    <view
+      class="getCropperImage btn bg-gradual-red"
+      bindtap="getCropperImage">
+      完成
+    </view>
+  </view>
+  <canvas 
+  canvas-id='pressCanvas' 
+  class='press-canvas' 
+  style='width: 500px; height: 500px;' ></canvas>
+</view>

@@ -1,0 +1,72 @@
+<scroll-view scroll-y class="scrollPage fade-in">
+  <view class="UCenter-bg">
+    <image style="border: 2px solid rgba(255,255,255,0.5);border-radius:50%;background:rgba(255,255,255,0.8)" src="{{headImg}}" class="png" ></image>
+    <view class="text-xl">{{nickName}}</view>
+    <image src="https://www.squirrelzoo.com/wp-content/uploads/2019/06/2019062602502240.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction">
+      <view class="text-xxl text-blue">{{starCount}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-favorfill"></text> 收藏</view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-blue">{{readCount}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-attentionfill"></text> 阅读</view>
+    </view>
+  
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/profile/profile" hover-class="none">
+        <text class="cuIcon-profile text-orange"></text>
+        <text class="text-grey">我的信息</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/safeCenter/safeCenter" hover-class="none">
+        <text class="cuIcon-safe text-orange"></text>
+        <text class="text-grey">安全中心</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/starRecord/starRecord" hover-class="none">
+        <text class="cuIcon-favorfill text-orange"></text>
+        <text class="text-grey">收藏列表</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/readRecord/readRecord" hover-class="none">
+        <text class="cuIcon-read text-orange"></text>
+        <text class="text-grey">阅读记录</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/commonSetting/commonSetting" hover-class="none">
+        <text class="cuIcon-settingsfill text-orange"></text>
+        <text class="text-grey">通用设置</text>
+      </navigator>
+    </view>
+    
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/updateLog/updateLog" hover-class="none">
+        <text class="cuIcon-formfill text-orange"></text>
+        <text class="text-grey">更新日志</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="feedback">
+        <text class="cuIcon-writefill text-orange"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/article/article?id=1457" hover-class="none">
+        <image src="/images/logo2.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">关于</text>
+      </navigator>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

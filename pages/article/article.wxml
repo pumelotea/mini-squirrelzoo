@@ -1,0 +1,103 @@
+<import src="/towxml/entry.wxml"/>
+<view class="loading-wrap" wx:if="{{!artcle}}">
+  <view class="m-loading"></view>
+</view>
+
+<view class="article fade-in" wx:else>
+  <view class="article-title">{{title}}</view>
+  <view class="cu-list menu-avatar fade-in" wx:if="{{artcle}}">
+    <view class="cu-item" style="height:100rpx;">
+      <view class="cu-avatar round" style="background-image:url({{authorImg}});left:0;background-color:white"></view>
+      <view class="content flex-sub" style="left:80rpx;width:calc(100% - 95rpx)">
+        <view class="text-grey">{{author}}</view>
+        <view class="text-gray text-sm flex justify-between">
+          {{artcle.post_date}}
+          <view class="text-gray text-sm">
+            <text class="cuIcon-attentionfill margin-lr-xs"></text> {{artcle.pageviews}}
+            <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{artcle.like_count}}
+            <text class="cuIcon-messagefill margin-lr-xs"></text> {{artcle.total_comments}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="fade-in">
+    <view class="cu-tag radius">{{artcle.category_name}}</view>
+  </view>
+  <view style=";margin-top:5px;">
+    <template is="entry" data="{{...articleWxml}}"/>
+  </view>
+  <!-- like -->
+  <view class="like-wrap" wx:if="{{artcle}}">
+    <view style="margin:auto;padding:10px;">
+      <button bindtap="postLike" class="cu-btn round shadow {{like?'bg-gradual-red':'bg-grey'}}" style="margin:auto;width:60px;margin-right:10px;">
+        <text class="cuIcon-appreciate lg text-white"></text>
+      </button>
+      <button bindtap="starArticle" class="cu-btn round shadow {{star?'bg-gradual-green':'bg-grey'}}" style="margin:auto;width:60px;margin-left:10px;">
+        <text class="cuIcon-favor lg text-white"></text>
+      </button>
+    </view>
+  </view>
+  <!-- 评论 -->
+  <view class="cu-list menu-avatar comment fade-in" catchtap="chooseReplyFor" data-id="0">
+    <view wx:if="{{commentList.length>0}}" class="bg-gradual-orange comment-list-title">
+      只显示最新的50条评论
+    </view>
+    <view style="text-align:center" wx:if="{{commentList.length==0}}">暂无评论</view>
+    <view class="cu-item spliter-bottom" wx:for="{{commentList}}" wx:key>
+      <view class="cu-avatar round" style="background-image:url({{item.author_url}});"></view>
+      <view class="content">
+        <view class="text-grey">{{item.author_name}}</view>
+        <view class="text-gray text-content text-df" catchtap="chooseReplyFor" data-id="{{item.id}}" data-name="{{item.author_name}}">
+          {{item.content}}
+        </view>
+        <view class="bg-grey padding-sm radius margin-top-sm  text-sm" wx:for="{{item.child}}" wx:for-item="item1" wx:key>
+          <view class="flex">
+            <view>{{item1.author_name}} 回复 {{item.author_name}}：</view>
+            <view class="flex-sub" catchtap="chooseReplyFor" data-id="{{item1.id}}" data-name="{{item1.author_name}}">{{item1.content}}</view>
+          </view>
+
+          <view wx:for="{{item1.child}}" wx:for-item="item2" wx:key>
+            <view class="flex">
+              <view>{{item2.author_name}} 回复 {{item1.author_name}}：</view>
+              <view class="flex-sub" catchtap="chooseReplyFor" data-id="{{item2.id}}" data-name="{{item2.author_name}}">{{item2.content}}</view>
+            </view>
+            <view wx:for="{{item2.child}}" wx:for-item="item3" wx:key>
+              <view class="flex">
+                <view>{{item3.author_name}} 回复 {{item2.author_name}}：</view>
+                <view class="flex-sub" catchtap="chooseReplyFor" data-id="{{item3.id}}" data-name="{{item3.author_name}}">{{item3.content}}</view>
+              </view>
+              <view wx:for="{{item3.child}}" wx:for-item="item4" wx:key>
+                <view class="flex">
+                  <view>{{item4.author_name}} 回复 {{item3.author_name}}：</view>
+                  <view class="flex-sub" data-id="{{item4.id}}" data-name="{{item4.author_name}}">{{item4.content}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+
+        </view>
+
+        <view class="margin-top-sm flex justify-between">
+          <view class="text-gray text-df">{{item.date}}</view>
+          <view>
+            <text class="cuIcon-messagefill text-gray margin-left-sm"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<view class="box">
+  <view class="cu-bar input foot">
+    <view class="cu-avatar round" style="background-image:url({{headImg}});"></view>
+    <input value="{{comment}}" bindinput="commentValue" placeholder="{{placeHolder}}" class="solid-bottom" maxlength="300" cursor-spacing="10"></input>
+    <button catchtap="postWeixinComment" class="cu-btn bg-gradual-orange shadow-blur round">
+    <view class="cuIcon-mark lg text-white"></view>
+    </button>
+  </view>
+</view>
+

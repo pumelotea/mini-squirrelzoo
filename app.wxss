@@ -1,0 +1,60 @@
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+
+.m-loading{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f37b1d;
+  animation: ani-spin-bounce 1s 0s ease-in-out infinite;
+  margin: auto;
+}
+
+@-webkit-keyframes ani-spin-bounce {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0)
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0
+  }
+}
+
+@keyframes ani-spin-bounce {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0)
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0
+  }
+}
+
+@keyframes fade-in-animation {
+  0% {
+    -webkit-transform: opacity(0);
+    transform: opacity(0);
+    opacity: 0
+  }
+  to {
+    -webkit-transform: opacity(1);
+    transform: opacity(1);
+    opacity: 1
+  }
+}
+
+.fade-in {
+  animation: fade-in-animation 1s 0s ease-in-out;
+}
+
+.card-img{
+  min-width: 240rpx;
+}
+
+.card-content{
+  word-break: break-all;
+}

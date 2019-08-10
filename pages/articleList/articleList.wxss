@@ -1,0 +1,8 @@
+/* pages/articleList/articleList.wxss */
+.card-img{
+  min-width: 240rpx;
+}
+
+.card-content{
+  word-break: break-all;
+}

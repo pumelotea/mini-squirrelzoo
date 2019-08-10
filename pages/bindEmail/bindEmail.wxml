@@ -1,0 +1,21 @@
+<view style="background-color: var(--ghostWhite);height:100vh;padding-top:10px;">
+  <view class="cu-form-group" wx:if="{{emailBinded==0}}">
+		<view class="title">已经绑定</view>
+		<input value="{{old}}" placeholder="必须" disabled="true"></input>
+	</view>
+  <view  wx:if="{{emailBinded==1}}">
+      <view class="cu-form-group">
+      <view class="title">新邮箱</view>
+      <input bindinput="newEmail" placeholder="必须"></input>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">验证码</view>
+      <input bindinput="mailCode" placeholder="6位数字邮件验证码"></input>
+      <button bindtap="getMailCode" class="cu-btn bg-blue shadow">获取</button>
+    </view>
+
+    <view class="padding flex flex-direction">
+      <button bindtap="bindMail" class="cu-btn bg-gradual-red margin-tb-sm lg">确定</button>
+    </view>
+  </view>
+</view>

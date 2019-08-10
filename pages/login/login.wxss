@@ -1,0 +1,24 @@
+.login-view{
+  width: 100vw;
+  height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  text-align: center;
+  background: #f37b1d;
+}
+
+.logo{
+  width: 120px;
+  height:120px;
+}
+
+.cprt{
+  color:white;
+  position: fixed;
+  bottom:10px;
+  text-align: center;
+  left:50%;
+  transform: translateX(-50%);
+}
+

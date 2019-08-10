@@ -1,0 +1,42 @@
+<view class="pageView">
+  <!-- 搜搜 -->
+  <view class="cu-bar search " style="position:absolute;z-index:1024;width:100%;">
+    <view class="cu-avatar round" style="background-image:url({{headImg}});"></view>
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input value="{{searchKey}}" type="text" placeholder="搜索文章" confirm-type="search"
+       bindinput="searchKey"
+      ></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-gradual-red shadow-blur round"
+        bindtap="search"
+      >搜索</button>
+    </view>
+  </view>
+  <view style="height:50px"></view>
+  <view class="cu-bar bg-white" style="margin: 10rpx 0" wx:if="{{postsList.length==0}}">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text>没有找到你想看的
+    </view>
+  </view>
+    <!-- list -->
+    <view class="cu-card article no-card fade-in" wx:for="{{postsList}}" wx:key>
+      <view class="cu-item shadow" bindtap="gotoDetail" data-aid="{{item.id}}">
+        <view class="title">
+          <view class="text-cut">{{item.title.rendered}}</view>
+        </view>
+        <view class="content">
+          <image class="card-img" src="{{item.post_full_image==''?'/images/logo.png':item.post_full_image}}" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content card-content">{{item.excerpt.rendered==''?'暂无摘要':item.excerpt.rendered}}</view>
+            <view>
+              <view class="cu-tag bg-red light sm round">{{item.category_name}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view style="height:2px;background:#f1f1f1"></view>
+    </view>
+</view>
+

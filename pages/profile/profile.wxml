@@ -1,0 +1,43 @@
+<view style="background-color: var(--ghostWhite);height:100vh;">
+  
+  <view class="cu-list menu " style="padding-top:10px;">
+    
+    <view bindtap="upload" class="cu-item arrow" style="padding-top:20rpx;padding-bottom:20rpx;">
+      
+        <view class="content">
+          <text class="text-black">头像</text>
+        </view>
+        <view class="action">
+            <image src="{{avatar}}" class="cu-avatar round bg-gray lg"></image> 
+        </view>
+    </view>
+    
+    <view class="cu-item arrow">
+      <navigator class="content flex" url="/pages/updateNick/updateNick?nick={{nickName}}" hover-class="none">
+        <view class="content">
+          <text class="text-black">昵称</text>
+        </view>
+        <view class="action">
+          <text class="text-grey ">{{nickName}}</text>
+        </view>
+      </navigator>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="text-grey">邮箱</text>
+      </view>
+      <view class="action">
+        <text class="text-grey">{{email}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="text-grey">账号</text>
+      </view>
+      <view class="action">
+        <text class="text-grey">{{userId}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
